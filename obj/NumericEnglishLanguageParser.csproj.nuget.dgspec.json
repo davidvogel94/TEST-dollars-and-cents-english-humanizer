@@ -1,0 +1,106 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.csproj": {}
+  },
+  "projects": {
+    "/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.csproj",
+        "projectName": "NumericEnglishLanguageParser",
+        "projectPath": "/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.csproj",
+        "packagesPath": "/home/dave/.nuget/packages/",
+        "outputPath": "/home/dave/git/github-personal/TEST-numeric-english-language-parser/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/dave/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Serilog.aspnetcore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "autofac": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "newtonsoft.json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "serilog.expressions": {
+              "target": "Package",
+              "version": "[3.4.1, )"
+            },
+            "serilog.sinks.seq": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/dave/.dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

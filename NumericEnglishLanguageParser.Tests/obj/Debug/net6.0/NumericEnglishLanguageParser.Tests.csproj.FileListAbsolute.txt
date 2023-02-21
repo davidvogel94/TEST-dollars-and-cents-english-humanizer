@@ -1,0 +1,15 @@
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/bin/Debug/net6.0/NumericEnglishLanguageParser.Tests
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/bin/Debug/net6.0/NumericEnglishLanguageParser.Tests.deps.json
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/bin/Debug/net6.0/NumericEnglishLanguageParser.Tests.runtimeconfig.json
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/bin/Debug/net6.0/NumericEnglishLanguageParser.Tests.dll
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/bin/Debug/net6.0/NumericEnglishLanguageParser.Tests.pdb
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/NumericEnglishLanguageParser.Tests.csproj.AssemblyReference.cache
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/NumericEnglishLanguageParser.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/NumericEnglishLanguageParser.Tests.AssemblyInfoInputs.cache
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/NumericEnglishLanguageParser.Tests.AssemblyInfo.cs
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/NumericEnglishLanguageParser.Tests.csproj.CoreCompileInputs.cache
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/NumericEnglishLanguageParser.Tests.dll
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/refint/NumericEnglishLanguageParser.Tests.dll
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/NumericEnglishLanguageParser.Tests.pdb
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/NumericEnglishLanguageParser.Tests.genruntimeconfig.cache
+/home/dave/git/github-personal/TEST-numeric-english-language-parser/NumericEnglishLanguageParser.Tests/obj/Debug/net6.0/ref/NumericEnglishLanguageParser.Tests.dll
