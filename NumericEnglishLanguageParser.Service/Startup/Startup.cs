@@ -1,47 +1,40 @@
-using System;
-
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Logging.EventSource;
-
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-
+using NumericEnglishLanguageParser.Service.Middleware;
+using NumericEnglishLanguageParser.Service.Humanizers;
 
 using Serilog;
-using NumericEnglishLanguageParser.Service.Middleware;
+
+using System.Globalization;
 
 namespace NumericEnglishLanguageParser.Service.Startup
 {
     public class Startup
     {
-        private IContainer ApplicationContainer { get; set; }
+        private IContainer? ApplicationContainer { get; set; }
         private IConfiguration Configuration { get; }
 
         public Startup(IWebHostEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
+            // Build configurations
+            Configuration = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddEnvironmentVariables();
+                .AddEnvironmentVariables()
+                .AddJsonFile("appsettings.json")
+                .Build();
 
-            Configuration = builder.Build();
-
+            // Configure Serilog
             Log.Logger = new LoggerConfiguration()
+                // Read logger configuration from environment variables as well as appsettings.json
                 .ReadFrom.Configuration(Configuration)
-                .WriteTo.Console()
-                .WriteTo.File("log.log")
-                .Enrich.WithProperty("appcode", System.Reflection.Assembly.GetExecutingAssembly().GetName().Name)
+                // Enrich logs with app metadata for cloud use
+                .Enrich.WithProperty("appcode", System.Reflection.Assembly.GetExecutingAssembly().GetName().Name ?? "Unknown app")
                 .Enrich.WithProperty("appversion", Configuration.GetSection("ApiVersion").Value)
                 .CreateLogger();
         }
 
+        // Called automatically by the runtime
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             // add any service configurations with services.Configure<TSettings>(Configuration) where TSettings : IOptions<T>
@@ -58,27 +51,34 @@ namespace NumericEnglishLanguageParser.Service.Startup
             return new AutofacServiceProvider(ApplicationContainer);
         }
 
+        // Called automatically by the runtime
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime applicationLifetime)
         {
             app
-                .UseMiddleware<ExceptionResponseMiddleware>()
+                .UseMiddleware<ExceptionResponseMiddleware>() // Respond meaningfully to exceptions in a single place via middleware to avoid cluttering code with exception handling
                 .UseRouting()
                 .UseResponseCompression()
                 .UseEndpoints(x => x.MapControllers());
 
             applicationLifetime
                 .ApplicationStopped
-                    .Register(() => ApplicationContainer.Dispose());
+                .Register(() => ApplicationContainer!.Dispose());
         }
 
         private static IContainer CreateAutofacContainer(IServiceCollection services)
         {
             var builder = new ContainerBuilder();
             
-            // TODO: Autofac registrations here.
+            // Register logger singleton so it can be used via dependency injection.
             builder.RegisterInstance(Log.Logger).AsImplementedInterfaces();
+            // Register humanization helpers
+            builder.RegisterType<MoneyHumanizer>().AsImplementedInterfaces();
+            // Register culture info for humanizer dependency injection so that this can be relatively easily changed later
+            // (i.e. without changing all implementations)
+            builder.Register<CultureInfo>(_ => CultureInfo.CurrentCulture);
 
             builder.Populate(services);
+
             return builder.Build();
         }
     }
