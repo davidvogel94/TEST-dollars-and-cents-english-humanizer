@@ -4,29 +4,7 @@ using MoneyHumanizer.Service.Extensions.BaseTypeExtensions;
 namespace MoneyHumanizer.Service.Humanizers;
 
 
-/*
- *  General strategy: 
- *      1. Define "digit groups" corresponding to "hundred", "thousand", "million" etc. and associate them with the number of digits that any given number 
- *          must have to belong to these groups.
- *
- *
- *      2. Account for digits corresponding to numbers less than 100 as these numbers have unique names in English compared to every other number
- *
- *
- *      3. Remove any left-padded zeros from the input digit array
- *
- *      
- *      4. Using the number of digits minimally required for the digit grouping to which the number belongs, take away this many digits from
- *         the end of the number and humanize what remains using a recursive function call.
- *
- *         This is done to accomplish the humanization of, for example, the "one hundred" in "one hundred thousand".
- *
- *         Following this, append the actual digit grouping for the number, e.g. "thousand" in "one hundred thousand".
- * 
- *
- *      6. Return the humanized string including a recursive function call to humanize any digits that remain to be humanized.
- */
-
+// SEE README.MD FOR EXPLANATION OF ALGORITHM STRATEGY
 public class MoneyHumanizer : IMoneyHumanizer
 {
     public MoneyHumanizer() { }
