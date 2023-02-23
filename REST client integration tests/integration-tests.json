@@ -1,0 +1,550 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Money Value Humanizer Test",
+    "dateExported": "2023-02-23T11:22:03.921Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "37fa7f00-8ef2-4b4c-b50d-66dd96724c19",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=1",
+            "url": "https://localhost:8080/MoneyHumanizer?value=1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-02-23T09:59:04.445Z",
+            "modified": "2023-02-23T11:20:17.896Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one dollar"
+                }
+            ]
+        },
+        {
+            "_id": "7ea0905c-0db2-46a6-a2ee-b1b165dc69c7",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=10",
+            "url": "https://localhost:8080/MoneyHumanizer?value=10",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-02-23T10:02:08.165Z",
+            "modified": "2023-02-23T11:20:38.257Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "10",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "ten dollars"
+                }
+            ]
+        },
+        {
+            "_id": "95ee8380-9f43-4ccd-86c1-60d5d9f79356",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=15",
+            "url": "https://localhost:8080/MoneyHumanizer?value=15",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-02-23T10:02:23.745Z",
+            "modified": "2023-02-23T11:20:41.939Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "15",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "fifteen dollars"
+                }
+            ]
+        },
+        {
+            "_id": "1743b59a-5ee3-4050-86b2-7c99c918711b",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=20",
+            "url": "https://localhost:8080/MoneyHumanizer?value=20",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-02-23T10:02:34.048Z",
+            "modified": "2023-02-23T11:20:43.778Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "20",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "twenty dollars"
+                }
+            ]
+        },
+        {
+            "_id": "4a387de8-9728-43ba-a00a-0c9211277f62",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=35.4",
+            "url": "https://localhost:8080/MoneyHumanizer?value=35.4",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-02-23T10:02:49.053Z",
+            "modified": "2023-02-23T11:20:45.546Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "35.4",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "thirty-five dollars and fourty cents"
+                }
+            ]
+        },
+        {
+            "_id": "70406b1d-e6f8-43eb-bf2f-4595423a714f",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=100",
+            "url": "https://localhost:8080/MoneyHumanizer?value=100",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2023-02-23T10:03:00.347Z",
+            "modified": "2023-02-23T11:20:47.427Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "100",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one hundred dollars"
+                }
+            ]
+        },
+        {
+            "_id": "675fa61c-dbdb-43c4-abb0-284c6f07970e",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=125",
+            "url": "https://localhost:8080/MoneyHumanizer?value=125",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-02-23T10:03:13.357Z",
+            "modified": "2023-02-23T11:20:49.125Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "125",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one hundred and twenty-five dollars"
+                }
+            ]
+        },
+        {
+            "_id": "c64a77fa-b226-4c26-85ee-f769d06392a7",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=513.56",
+            "url": "https://localhost:8080/MoneyHumanizer?value=513.56",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-02-23T10:03:23.768Z",
+            "modified": "2023-02-23T11:20:51.446Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "513.56",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "five hundred and thirteen dollars and fifty-six cents"
+                }
+            ]
+        },
+        {
+            "_id": "8a13eae8-483c-414e-abe6-be1f0823a2db",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=1000",
+            "url": "https://localhost:8080/MoneyHumanizer?value=1000",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-02-23T10:03:36.481Z",
+            "modified": "2023-02-23T11:17:54.383Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "1000",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one thousand dollars"
+                }
+            ]
+        },
+        {
+            "_id": "be43f438-def3-4964-8bfb-0b1231ae3908",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=1503.45",
+            "url": "https://localhost:8080/MoneyHumanizer?value=1503.45",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-02-23T10:03:52.195Z",
+            "modified": "2023-02-23T11:21:01.822Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "1503.45",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one thousand five hundred and three dollars and fourty-five cents"
+                }
+            ]
+        },
+        {
+            "_id": "107420cc-ee57-4a50-9cc2-21565d0fb5b6",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=10000",
+            "url": "https://localhost:8080/MoneyHumanizer?value=10000",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-02-23T10:04:15.515Z",
+            "modified": "2023-02-23T11:21:02.783Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "10000",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "ten thousand dollars"
+                }
+            ]
+        },
+        {
+            "_id": "cb87a993-6ffb-43f8-8e0d-e46584244e5f",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=13654.98",
+            "url": "https://localhost:8080/MoneyHumanizer?value=13654.98",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2023-02-23T10:04:29.489Z",
+            "modified": "2023-02-23T11:21:03.445Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "13654.98",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "thirteen thousand six hundred and fifty-four dollars and ninety-eight cents"
+                }
+            ]
+        },
+        {
+            "_id": "541bcc06-2f4d-4eb7-8d91-40309f904958",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=100000",
+            "url": "https://localhost:8080/MoneyHumanizer?value=100000",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2023-02-23T10:04:57.139Z",
+            "modified": "2023-02-23T11:21:04.544Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "100000",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one hundred thousand dollars"
+                }
+            ]
+        },
+        {
+            "_id": "dc9620f2-9183-4b76-953a-9992fbdfa1fc",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=111111.11",
+            "url": "https://localhost:8080/MoneyHumanizer?value=111111.11",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-02-23T10:05:15.973Z",
+            "modified": "2023-02-23T11:21:05.113Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "111111.11",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one hundred and eleven thousand one hundred and eleven dollars and eleven cents"
+                }
+            ]
+        },
+        {
+            "_id": "12b9f010-75f2-455a-bfbf-a8feb2101107",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=235678.95",
+            "url": "https://localhost:8080/MoneyHumanizer?value=235678.95",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2023-02-23T10:05:39.218Z",
+            "modified": "2023-02-23T11:21:05.705Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "235678.95",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "two hundred and thirty-five thousand six hundred and seventy-eight dollars and ninety-five cents"
+                }
+            ]
+        },
+        {
+            "_id": "557924c9-48c6-4ee8-85a7-b6c148d6eb06",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=1000000",
+            "url": "https://localhost:8080/MoneyHumanizer?value=1000000",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2023-02-23T10:06:11.886Z",
+            "modified": "2023-02-23T11:21:06.321Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "1000000",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one million dollars"
+                }
+            ]
+        },
+        {
+            "_id": "0cd4dc7f-cb20-4d14-acf4-133422621023",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=1111234.51",
+            "url": "https://localhost:8080/MoneyHumanizer?value=1111234.51",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2023-02-23T10:06:33.236Z",
+            "modified": "2023-02-23T11:21:06.936Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "1111234.51",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one million one hundred and eleven thousand two hundred and thirty-four dollars and fifty-one cents"
+                }
+            ]
+        },
+        {
+            "_id": "6c9d3c56-c517-411f-a76d-24ba992cc110",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=10111234.51",
+            "url": "https://localhost:8080/MoneyHumanizer?value=10111234.51",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2023-02-23T10:07:02.108Z",
+            "modified": "2023-02-23T11:21:07.505Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "10111234.51",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "ten million one hundred and eleven thousand two hundred and thirty-four dollars and fifty-one cents"
+                }
+            ]
+        },
+        {
+            "_id": "8068d50e-d26a-4bc0-ba94-714ee7163b4f",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=126111234.51",
+            "url": "https://localhost:8080/MoneyHumanizer?value=126111234.51",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2023-02-23T10:07:30.952Z",
+            "modified": "2023-02-23T11:21:08.120Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "126111234.51",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one hundred and twenty-six million one hundred and eleven thousand two hundred and thirty-four dollars and fifty-one cents"
+                }
+            ]
+        },
+        {
+            "_id": "c7cd3031-3112-424a-89c0-d4edc80981bc",
+            "colId": "065ee1ba-a4ba-4dba-91ed-7e6219b9f85a",
+            "containerId": "",
+            "name": "https://localhost:8080/MoneyHumanizer?value=1326111234.51",
+            "url": "https://localhost:8080/MoneyHumanizer?value=1326111234.51",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2023-02-23T10:07:54.430Z",
+            "modified": "2023-02-23T11:21:08.690Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "value",
+                    "value": "1326111234.51",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "one billion three hundred and twenty-six million one hundred and eleven thousand two hundred and thirty-four dollars and fifty-one cents"
+                }
+            ]
+        }
+    ],
+    "settings": {}
+}

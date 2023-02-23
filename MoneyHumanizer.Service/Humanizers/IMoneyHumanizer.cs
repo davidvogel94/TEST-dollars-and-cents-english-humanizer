@@ -1,4 +1,4 @@
-namespace NumericEnglishLanguageParser.Service.Humanizers;
+namespace MoneyHumanizer.Service.Humanizers;
 
 public interface IMoneyHumanizer
 {

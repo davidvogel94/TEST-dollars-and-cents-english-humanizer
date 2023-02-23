@@ -1,12 +1,8 @@
 using Serilog;
-
-using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 
-namespace NumericEnglishLanguageParser.Service
+namespace MoneyHumanizer.Service
 {
     public class Program
     {
@@ -22,7 +18,7 @@ namespace NumericEnglishLanguageParser.Service
                     .UseSwaggerUI()
                     .UseSerilogRequestLogging())
                 .UseStartup<Startup.Startup>()
-                .UseUrls("https://+:8080");
+                .UseUrls("http://+:1025");
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             

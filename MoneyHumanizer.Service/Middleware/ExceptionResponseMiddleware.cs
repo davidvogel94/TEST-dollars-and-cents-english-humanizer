@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Serilog;
 using ILogger = Serilog.ILogger;
 
-namespace NumericEnglishLanguageParser.Service.Middleware;
+namespace MoneyHumanizer.Service.Middleware;
 
 /* SUMMARY:
  *

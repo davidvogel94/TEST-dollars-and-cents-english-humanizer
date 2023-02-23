@@ -1,14 +1,13 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 
-using NumericEnglishLanguageParser.Service.Middleware;
-using NumericEnglishLanguageParser.Service.Humanizers;
+using MoneyHumanizer.Service.Middleware;
+using Humanizers = MoneyHumanizer.Service.Humanizers;
 
 using Serilog;
 
-using System.Globalization;
 
-namespace NumericEnglishLanguageParser.Service.Startup
+namespace MoneyHumanizer.Service.Startup
 {
     public class Startup
     {
@@ -58,6 +57,8 @@ namespace NumericEnglishLanguageParser.Service.Startup
                 .UseMiddleware<ExceptionResponseMiddleware>() // Respond meaningfully to exceptions in a single place via middleware to avoid cluttering code with exception handling
                 .UseRouting()
                 .UseResponseCompression()
+                .UseSwagger()
+                .UseSwaggerUI()
                 .UseEndpoints(x => x.MapControllers());
 
             applicationLifetime
@@ -72,10 +73,7 @@ namespace NumericEnglishLanguageParser.Service.Startup
             // Register logger singleton so it can be used via dependency injection.
             builder.RegisterInstance(Log.Logger).AsImplementedInterfaces();
             // Register humanization helpers
-            builder.RegisterType<MoneyHumanizer>().AsImplementedInterfaces();
-            // Register culture info for humanizer dependency injection so that this can be relatively easily changed later
-            // (i.e. without changing all implementations)
-            builder.Register<CultureInfo>(_ => CultureInfo.CurrentCulture);
+            builder.RegisterType<Humanizers.MoneyHumanizer>().AsImplementedInterfaces();
 
             builder.Populate(services);
 

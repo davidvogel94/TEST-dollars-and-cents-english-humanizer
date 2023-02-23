@@ -1,13 +1,13 @@
-﻿using NumericEnglishLanguageParser.Service.Controllers;
-using NumericEnglishLanguageParser.Service.Humanizers;
+﻿using MoneyHumanizer.Service.Controllers;
+using MoneyHumanizer.Service.Humanizers;
 using NSubstitute;
 using Shouldly;
 using TestStack.BDDfy;
 using Xunit;
 
-namespace NumericEnglishLanguageParser.Tests;
+namespace MoneyHumanizer.Tests;
 
-class MoneyHumanizerControllerTests
+public class MoneyHumanizerControllerTests
 {
     /*
      *      SUBJECT AND DEPENDENCY DECLARATIONS

@@ -1,4 +1,4 @@
-namespace NumericEnglishLanguageParser.Service.Extensions
+namespace MoneyHumanizer.Service.Extensions.BaseTypeExtensions
 {
     public static class DecimalExtensions
     {
@@ -38,7 +38,7 @@ namespace NumericEnglishLanguageParser.Service.Extensions
     
     public static class IntArrayExtensions
     {
-        public static int DigitsToNumber(this int[] digits)
+        public static int CombineToNumber(this int[] digits)
         {
             var returnVal = 0;
 

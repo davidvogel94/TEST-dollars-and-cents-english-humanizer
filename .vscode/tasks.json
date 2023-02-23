@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/NumericEnglishLanguageParser.Service/NumericEnglishLanguageParser.Service.csproj",
+                "${workspaceFolder}/MoneyHumanizer.Service/MoneyHumanizer.Service.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/NumericEnglishLanguageParser.Service/NumericEnglishLanguageParser.Service.csproj",
+                "${workspaceFolder}/MoneyHumanizer.Service/MoneyHumanizer.Service.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/NumericEnglishLanguageParser.Service/NumericEnglishLanguageParser.Service.csproj"
+                "${workspaceFolder}/MoneyHumanizer.Service/MoneyHumanizer.Service.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
