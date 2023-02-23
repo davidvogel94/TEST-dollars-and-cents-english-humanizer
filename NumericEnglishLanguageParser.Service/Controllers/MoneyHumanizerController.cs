@@ -1,8 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Humanizer;
-using System.Text;
 using NumericEnglishLanguageParser.Service.Humanizers;
-
 namespace NumericEnglishLanguageParser.Service.Controllers;
 
 [ApiController]
