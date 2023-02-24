@@ -38,12 +38,12 @@ namespace MoneyHumanizer.Service.Extensions.BaseTypeExtensions
     
     public static class IntArrayExtensions
     {
-        public static int CombineToNumber(this int[] digits)
+        public static long CombineToNumber(this int[] digits)
         {
-            var returnVal = 0;
+            long returnVal = 0;
 
             for(int i = digits.Length; i > 0; i--)
-                returnVal += (int)Math.Pow(10, i-1) * digits[^i];
+                returnVal += Convert.ToInt64(Math.Pow(10, i-1) * digits[^i]);
 
             return returnVal;
         }
