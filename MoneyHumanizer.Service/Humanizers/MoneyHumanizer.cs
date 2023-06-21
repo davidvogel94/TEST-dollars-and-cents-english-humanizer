@@ -49,14 +49,14 @@ public class MoneyHumanizer : IMoneyHumanizer
         var dollarDigits = value.WholePartDigits();
         var centDigits = value.FractionPartDigits(decimalPlaces: 2);
 
-        var pluralizeDollars = dollarDigits.CombineToNumber() > 1 ? "dollars" : "dollar";
+        var pluralizeDollars = dollarDigits.CombineToNumber() != 1 ? "dollars" : "dollar";
 
         var humanized = $"{sign}{HumanizeDigits(dollarDigits)} {pluralizeDollars}";
 
         // only add on cents if they're greater than zero ("and zero cents" is technically correct but we don't generally say it)
         if (centDigits.Sum() > 0)
         {
-            var pluralizeCents = centDigits.CombineToNumber() > 1 ? "cents" : "cent";
+            var pluralizeCents = centDigits.CombineToNumber() != 1 ? "cents" : "cent";
             humanized += $" and {HumanizeDigits(centDigits)} {pluralizeCents}";
         }
 
