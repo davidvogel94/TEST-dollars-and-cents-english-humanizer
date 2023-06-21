@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="autofac" Version="6.5.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="LanguageServerProtocol" Version="7.0.1" />
     <PackageReference Include="newtonsoft.json" Version="13.0.2" />
     <PackageReference Include="Serilog.aspnetcore" Version="6.1.0" />
     <PackageReference Include="serilog.expressions" Version="3.4.1" />
