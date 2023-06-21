@@ -13,7 +13,7 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 
-EXPOSE 8080
+EXPOSE 1025
 
 WORKDIR /MoneyHumanizer.Service
 COPY --from=build-env /MoneyHumanizer.Service/out .

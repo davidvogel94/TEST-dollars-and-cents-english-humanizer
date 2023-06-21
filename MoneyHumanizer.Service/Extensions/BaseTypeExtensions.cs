@@ -1,4 +1,3 @@
-using System.Globalization;
 namespace MoneyHumanizer.Service.Extensions.BaseTypeExtensions
 {
     public static class DecimalExtensions
