@@ -1,49 +1,47 @@
+using System.Globalization;
 namespace MoneyHumanizer.Service.Extensions.BaseTypeExtensions
 {
     public static class DecimalExtensions
     {
         // using Math.Abs() as these extensions are explicitly for returning digits, not signs.
-
-        public static int[] WholePartDigits(this decimal value)
-        {
-            var absValue = Math.Abs(value);
-
-            return decimal
-                .Truncate(absValue)
-                .ToString()
-                .Select(d => int.Parse(d.ToString()))
-                .ToArray();
-        }
+        public static int[] WholePartDigits(this decimal value) => Convert.ToInt64(decimal.Truncate(Math.Abs(value)))
+            .GetDigitArray();
 
         // Round off digits for the fraction part if specified; default to 28 - i.e. decimal max precision - to include all of the digits without rounding.
         public static int[] FractionPartDigits(this decimal value, int decimalPlaces = 28)
         {
             var absValue = Math.Abs(value);
-            var fractionPart = Math.Round(absValue - decimal.Truncate(absValue), decimalPlaces);
+            var rounded = Math.Round(absValue - decimal.Truncate(absValue), decimalPlaces);
 
-            var fractionPartDigits = fractionPart
-                .ToString()
-                .Skip(2) // i.e. the '0.' part
-                .Select(d => int.Parse(d.ToString()));
+            for (var i = 0; i < decimalPlaces; i++) rounded *= 10;
 
-            if(fractionPartDigits.Count() < decimalPlaces)
-            {
-                foreach(var zero in Enumerable.Repeat(0, decimalPlaces - fractionPartDigits.Count()))
-                    fractionPartDigits = fractionPartDigits.Append(zero);
-            }
-
-            return fractionPartDigits.ToArray();
+            return Convert.ToInt64(rounded)
+                .GetDigitArray();
         }
     }
-    
+
     public static class IntArrayExtensions
     {
-        public static int CombineToNumber(this int[] digits)
-        {
-            var returnVal = 0;
+        public static int[] GetDigitArray(this long value) =>
+            _enumerateDigitsInReverse(Math.Abs(value))
+                .Reverse()
+                .ToArray();
 
-            for(int i = digits.Length; i > 0; i--)
-                returnVal += (int)Math.Pow(10, i-1) * digits[^i];
+        private static IEnumerable<int> _enumerateDigitsInReverse(long i)
+        {
+            do
+            {
+                var shift = (i / 10) * 10; // make use of integer precision loss to get the last digit in i
+                yield return (int)(i - shift);
+            } while ((i /= 10) > 0);
+        }
+
+        public static long CombineToNumber(this int[] digits)
+        {
+            var returnVal = 0L;
+
+            for (var i = digits.Length; i > 0; i--)
+                returnVal += (long)Math.Pow(10, i - 1) * digits[^i];
 
             return returnVal;
         }
